@@ -1,4 +1,4 @@
 #!/bin/sh
 
 iface=$(cat /proc/net/wireless | perl -ne '/(\w+):/ && print $1')
-python /opt/arpWatchDogDaemon/awdd.py $iface
+/opt/arpWatchDogDaemon/awdd.py $iface > /dev/null 2>&1 &

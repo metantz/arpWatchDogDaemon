@@ -8,4 +8,4 @@ cp ./awdd.py /opt/arpWatchDogDaemon/
 cp -R ./img /opt/arpWatchDogDaemon/
 cp ./awdd.sh /etc/profile.d
 chmod 744 /etc/profile.d/awdd.sh
-/etc/profile.d/awdd.sh
+/etc/profile.d/awdd.sh &

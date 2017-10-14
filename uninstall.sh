@@ -6,5 +6,3 @@ fi
 
 kill -9 $(pgrep awdd.py)
 rm -rf /opt/arpWatchDogDaemon
-kill -9 $(pgrep awdd.sh)
-rm /etc/profile.d/awdd.sh

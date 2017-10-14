@@ -31,13 +31,13 @@ def pckt_hndlr(pckt):
 		elif(res == "I know it"):
 			pass
 		elif(res == "Same MAC, different IP"):
-			if(pckt_hndlr.counter1 == 0 or not pckt_hndlr.counter1 % 100):
+			if(pckt_hndlr.counter1 == 0 or not pckt_hndlr.counter1 % 50):
 				Notify.Notification.new("Arp Spoofers Detected!",'IP: ' + str(source_ip) + '\nMAC: ' + str(source_MAC)+ '\nMAC known with different IP !!',os.path.dirname(os.path.abspath(__file__))+"/img/Skull.jpg").show()
 				pckt_hndlr.counter1 +=1
 				if(pckt_hndlr.counter1 == 10000):
 					pckt_hndlr.counter1 = 1
 		elif( res == "Same IP, different MAC"):
-			if(pckt_hndlr.counter2 == 0 or not pckt_hndlr.counter2 % 100):
+			if(pckt_hndlr.counter2 == 0 or not pckt_hndlr.counter2 % 50):
 				Notify.Notification.new("Arp Spoofers Detected!",'IP: ' + str(source_ip) + '\nMAC: ' + str(source_MAC)+ '\nIP known with different MAC !!',os.path.dirname(os.path.abspath(__file__))+"/img/Skull.jpg").show()
 				pckt_hndlr.counter2 +=1
 				if(pckt_hndlr.counter2 == 10000):

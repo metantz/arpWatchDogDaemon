@@ -9,8 +9,10 @@ chmod 744 /opt/arpWatchDogDaemon/awdd.py /opt/arpWatchDogDaemon/uninstall.sh
 cp -R ./img /opt/arpWatchDogDaemon/
 cp ./awdd.sh /usr/local/sbin/
 chmod 744 /usr/local/sbin/awdd.sh
-cp ./awdd.service /etc/systemd/system/
-chmod 664 /etc/systemd/system/awdd.service 
-systemctl daemon-reload
-systemctl enable awdd
-systemctl start awdd
+mkdir -p ~/.config/systemd/user/
+cp ./awdd.service ~/.config/systemd/user/
+chmod 664 ~/.config/systemd/user/awdd.service 
+systemctl --user daemon-reload
+systemctl --user enable awdd
+loginctl enable-linger
+systemctl --user start awdd

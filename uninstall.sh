@@ -5,4 +5,9 @@ if [ "$(id -u)" != "0" ]; then
 fi
 
 kill -9 $(pgrep awdd.py)
+systemctl stop awdd
+systemctl disable awdd
+rm /etc/systemd/system/awdd.system
+systemctl daemon-reload
+systemctl reset-failed
 rm -rf /opt/arpWatchDogDaemon

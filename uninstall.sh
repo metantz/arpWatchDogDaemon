@@ -10,4 +10,5 @@ systemctl disable awdd
 rm /etc/systemd/system/awdd.system
 systemctl daemon-reload
 systemctl reset-failed
+rm -rf /usr/local/sbin/awdd.sh
 rm -rf /opt/arpWatchDogDaemon

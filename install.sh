@@ -5,6 +5,5 @@ if [ "$(id -u)" != "0" ]; then
 fi
 mkdir -p /opt/arpWatchDogDaemon
 cp ./awdd.py ./uninstall.sh ./awdd.sh /opt/arpWatchDogDaemon/
-chmod 744 /opt/arpWatchDogDaemon/awdd.py /opt/arpWatchDogDaemon/uninstall.sh
-chmod 4755 /opt/arpWatchDogDaemon/awdd.sh
+chmod 744 /opt/arpWatchDogDaemon/awdd.py /opt/arpWatchDogDaemon/uninstall.sh /opt/arpWatchDogDaemon/awdd.sh
 cp -R ./img /opt/arpWatchDogDaemon/

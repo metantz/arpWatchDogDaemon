@@ -4,8 +4,7 @@ After=graphical.target
 
 [Service]
 Environment="DISPLAY=:0" "XAUTHORITY=/home/#USER#/.Xauthority"
-ExecStart=/usr/bin/dbus-launch /usr/local/sbin/awdd.sh
-User=root
+ExecStart=/usr/local/sbin/awdd.sh
 
 [Install]
 WantedBy=graphical.target

@@ -1,0 +1,11 @@
+[Unit]
+Description=Arp Spoofers detector
+After=graphical.target
+
+[Service]
+Environment="DISPLAY=:0" "XAUTHORITY=/home/#USER#/.Xauthority"
+ExecStart=/usr/bin/dbus-launch /usr/local/sbin/awdd.sh
+User=root
+
+[Install]
+WantedBy=graphical.target
